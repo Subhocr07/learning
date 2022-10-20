@@ -6,6 +6,12 @@ const registerValidations=[
     body("password").isLength({min:5}).withMessage("min length 5 is required"),
 ];
 
+const loginValidations = [
+    body('email').isEmail().normalizeEmail().trim().escape().withMessage('email is required'),
+    body('password').not().isEmpty().withMessage('password is required')
+]
+
 module.exports={
-    registerValidations
+    registerValidations,
+    loginValidations
 }
