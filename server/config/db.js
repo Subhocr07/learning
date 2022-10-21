@@ -12,4 +12,11 @@ const connect= async ()=>{
     }
 };
 
+// const connect=async()=>{mongoose
+//   .connect(env.MONGO_URI)
+//   .then(() => console.log("Db connection successfully"))
+//   .catch((err) => {
+//     console.log(err);
+// })}
+
 module.exports=connect;
